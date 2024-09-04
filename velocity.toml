@@ -76,7 +76,7 @@ lobby = "onPrem-lobby-nlb-35f4dff527af275e.elb.ap-northeast-2.amazonaws.com:2556
 lobby-sub = "a1eb53b19677745da9e7a1fff8467674-1f7166b44227bd01.elb.ap-northeast-2.amazonaws.com:30000"
 farm = "aa0d167797e3d48929a656ef7d398d5f-f3999cd09529916d.elb.ap-northeast-2.amazonaws.com:30001"
 fish = "a3cd3b2347d474b909b40f16477cafa6-76cc4d12a2bf3a1b.elb.ap-northeast-2.amazonaws.com:30002"
-wild = "a75487052969e4bb98aa40b59b666a16-af9cd9b6be2f19cc.elb.ap-northeast-2.amazonaws.com:30003"
+wild = "a75487052969e4bb98aa40b59b666a16-af9cd9b6be2f19cc.elb.ap-northeast-2.amazonaws.com:30004"
 
 # In what order we should try servers when a player logs in or is kicked from a server.
 try = [
