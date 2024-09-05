@@ -82,7 +82,7 @@ pipeline {
                     color: '#FFFF00',
                     message: "naaaaaice hanseok Changed to lobby-sub(cloud)"
                 )
-                    sh 'echo success'
+                    sh 'echo success tteesstt'
                 }
             }
         }
