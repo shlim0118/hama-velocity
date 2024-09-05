@@ -80,7 +80,7 @@ pipeline {
                     slackSend (
                     channel: '#velocity-cicd',
                     color: '#FFFF00',
-                    message: "naaaaaice hanseok Changed to lobby-sub(cloud)"
+                    message: "YATTA !!!!!!! fuck naaaaaice hanseok Changed to lobby-sub(cloud)"
                 )
                     sh 'echo success tteesst'
                 }
