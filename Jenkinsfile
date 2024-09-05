@@ -12,12 +12,6 @@ pipeline {
     stages {
         stage('Checkout Github') {
             steps {
-                slackSend (
-                    channel: '#velocity-cicd',
-                    color: '#FFFF00',
-                    message: "lobby-sub"
-                )
-
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [[$class: 'CloneOption', depth: 1]], 
                 userRemoteConfigs: [[credentialsId: GITCREDENTIAL, url: GITWEBADD]]])
             }
@@ -83,6 +77,11 @@ pipeline {
                     sh 'echo failedzz'
                 }
                 success {
+                    slackSend (
+                    channel: '#velocity-cicd',
+                    color: '#FFFF00',
+                    message: "naaaaaice hanseok Changed to lobby-sub(cloud)"
+                )
                     sh 'echo success'
                 }
             }
