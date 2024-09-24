@@ -63,8 +63,8 @@ pipeline {
                     git credentialsId: GITCREDENTIAL, url: GITSSHADD, branch: 'main'
                     sh "git config --global user.email ${GITMAIL}"
                     sh "git config --global user.name ${GITNAME}"
-                    sh "cd velocity"
                     sh "sed -i 's@${ECR}:.*@${ECR}:${currentBuild.number}@g' velocity.yaml"
+                    sh "cd velocity"
 
                     sh 'git add .'
                     sh 'git branch -M main'
