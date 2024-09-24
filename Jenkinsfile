@@ -75,7 +75,7 @@ pipeline {
             }
             post {
                 failure {
-                    sh 'echo failedzz'
+                    sh 'echo failedzzzz'
                 }
                 success {
                     slackSend (
