@@ -83,7 +83,7 @@ pipeline {
                     color: '#FFFF00',
                     message: "YATTA !!!! naaaaaice hanseok Changed to lobby"
                 )
-                    sh 'echo successs test1'
+                    sh 'echo successssss test1'
                 }
             }
         }
