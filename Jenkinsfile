@@ -4,7 +4,7 @@ pipeline {
         GITNAME = 'shlim0118'
         GITMAIL = 'tim02366@naver.com'
         GITWEBADD = 'https://github.com/shlim0118/hama-velocity.git'
-        GITSSHADD = 'git@github.com:shlim0118/velocity-deploy.git'
+        GITSSHADD = 'git@github.com:shlim0118/hama-deployment.git'
         GITCREDENTIAL = 'git_cre'
         ECR = '756266714368.dkr.ecr.ap-northeast-2.amazonaws.com/velocity'
         AWSCREDENTIAL = 'aws_cre'
@@ -63,6 +63,7 @@ pipeline {
                     git credentialsId: GITCREDENTIAL, url: GITSSHADD, branch: 'main'
                     sh "git config --global user.email ${GITMAIL}"
                     sh "git config --global user.name ${GITNAME}"
+                    sh "cd velocity"
                     sh "sed -i 's@${ECR}:.*@${ECR}:${currentBuild.number}@g' velocity.yaml"
 
                     sh 'git add .'
@@ -80,7 +81,7 @@ pipeline {
                     slackSend (
                     channel: '#velocity-cicd',
                     color: '#FFFF00',
-                    message: "YATTA !!!! naaaaaice hanseok Changed to lobby-sub(cloud)"
+                    message: "YATTA !!!! naaaaaice hanseok Changed to lobby"
                 )
                     sh 'echo successs test1'
                 }
